@@ -23,19 +23,26 @@ const App = () => {
     }, [markdown]);
 
     return (
-        <div className="container mx-auto p-4 flex">
-            <div className="editor flex-1 mr-4">
-                <textarea 
-                    value={markdown}
-                    onChange={(e) => setMarkdown(e.target.value)}
-                    placeholder="Enter your text..."
-                    className="w-full h-96 p-2 border rounded"
-                />
+        <div className="flex flex-col h-screen">
+            <h1 className="text-2xl text-center py-4 font-['Aerial_Light']" >
+                RAKO - Realtime Markdown Editor
+            </h1>
+            <div className="flex flex-1">
+                <div className="editor w-1/2 p-4">
+                    <textarea 
+                        value={markdown}
+                        onChange={(e) => setMarkdown(e.target.value)}
+                        placeholder="Enter your text..."
+                        className="w-full h-full p-2 border rounded resize-none font-['Aerial_Light']"
+                    />
+                </div>
+                <div className="w-1/2 p-4 flex flex-col">
+                    <div className="preview flex-1 border p-4 overflow-y-auto">
+                        <ReactMarkdown className="prose font-['Aerial_Light']">{markdown}</ReactMarkdown>
+                    </div>
+                </div>
             </div>
-            <div className="preview flex-1 border p-4 h-96 overflow-y-auto">
-                <h2 className="text-xl font-bold mb-2">Your Markdown Preview</h2>
-                <ReactMarkdown>{markdown}</ReactMarkdown>
-            </div>
+       
         </div>
     );
 };
