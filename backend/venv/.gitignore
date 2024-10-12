@@ -7,3 +7,4 @@ node_modules
 pyvenv.cfg
 venv/lib/python3.12/site-packages
 bin
+.gitignore
