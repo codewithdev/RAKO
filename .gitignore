@@ -36,7 +36,16 @@ yarn-error.log*
 next-env.d.ts
 
 # backend virtual environment
-backend/venv/.env
-backend/venv/.pyvenv.cfg
-backend/venv/lib/
-backend/venv/bin/
+/backend/venv/
+!backend/venv/.gitkeep
+
+# Ensure .env file is not tracked
+/backend/venv/.env
+
+# Ignore all files in these directories
+/backend/venv/lib/**
+/backend/venv/bin/**
+
+# But keep the directories themselves
+!backend/venv/lib/.gitkeep
+!backend/venv/bin/.gitkeep
