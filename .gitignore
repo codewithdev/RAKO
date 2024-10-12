@@ -35,8 +35,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-./backend/venv/.env
-./backend/venv/.pyvenv.cfg
-./backend/venv/lib/python3.12/site-packages
-./backend/venv/bin
-
+# backend virtual environment
+backend/venv/.env
+backend/venv/.pyvenv.cfg
+backend/venv/lib/
+backend/venv/bin/
